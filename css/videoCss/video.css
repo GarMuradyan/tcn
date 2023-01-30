@@ -1,0 +1,109 @@
+.categ-videos-box {
+    position: relative;
+    background-color: rgb(255, 255, 255);
+}
+
+.categ-video {
+    width: 100%;
+    height: 1076px;
+    object-fit: cover;
+}
+
+.video-player-box {
+    width: 100%;
+    position: fixed;
+    transition: 0.5s;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(1deg, black, 60%, transparent);
+    border-top: 30px;
+    justify-content: flex-end;
+}
+
+.video-play-pause-and-duration-box {
+    width: 400px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.play-pause-duration-buttons {border: 0;background-color: transparent;color: white;}
+
+.play-pause-duration-buttons>span {font-size: 100px;}
+
+.transformY {
+    transform: translateY(-1080px);
+}
+
+.video-progres-box {display: flex;width: 100%;padding: 35px;justify-content: space-between;align-items: center;margin-top: 60px;}
+
+.video-time-box {font-size: 30px;width: 200px;display: flex;justify-content: flex-end;color: white;}
+
+.video-current-time {
+
+}
+
+.video-duration-time {
+    
+}
+
+.video-progres-line-box {width: 1690px;height: 10px;background-color: #7d7b7b;display: flex;}
+
+.progres-line-box {width: 0%;background-color: #1e2039;}
+
+.progres-line-button {
+    width: 25px;
+    border-radius: 30px;
+    background-color: #141523;
+    height: 25px;
+    position: relative;
+    top: -8px;
+    left: -2px;
+}
+
+.similiar-channels-parent-box {
+    width: 1920px;
+    height: 345px;
+    padding: 50px 0px;
+    background-color: #141523;
+    overflow: hidden;
+}
+
+.active-color {
+    background-color: white;
+}
+
+.favorite-color {
+    background-color: #242868;
+}
+
+.favorite-box {width: 100%;margin-top: 60px;padding: 0px 35px;}
+
+.favorite-button-box {
+    font-size: 25px;
+    justify-content: space-around;
+    background-color: transparent;
+    border: 0;
+    color: white;
+    width: 90px;
+    display: flex;
+    align-items: center;
+    background-color: #242868c7;
+    height: 90px;
+    border-radius: 50%;
+}
+
+.favorite-button-box>span {
+    font-size: 60px;
+}
+
+.similiar-channels-box {width: 8000px;display: flex;transition: 0.5s;}
+
+.play-pause-duration-buttons:nth-child(1) {
+    opacity: 0;
+}
+
+.play-pause-duration-buttons:nth-child(3) {
+    opacity: 0;
+}

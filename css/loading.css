@@ -1,0 +1,39 @@
+.loading-box {
+    background: #131522;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loading-poster {
+    width: 80px;
+    border-radius: 30px;
+}
+
+.video-load-box {
+    background: #131522;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.video-load-icon {
+    width: 100px;
+    height: 100px;
+    background-color: transparent;
+    border-radius: 50%;
+    border-bottom: 5px solid white;
+    border-left: 5px solid white;
+    animation: toggle 2s linear infinite;
+}
+
+@keyframes toggle {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

@@ -1,0 +1,186 @@
+.display {
+    display: none;
+}
+
+.main-settings-page-box {
+
+height: 100%;
+
+padding: 15px;
+}
+
+.settings-title-box {
+
+position: absolute;
+
+top: calc(50% - 16px/2 - 461px);
+
+margin-left: 20px;
+}
+
+.settings-box {
+
+margin-top: 120px;
+
+height: 620px;
+
+display: flex;
+}
+
+.settings-content-box {
+
+background: rgba(25, 33, 54, 0.5);
+
+border-radius: 6px;
+
+width: 1417px;
+
+margin-left: 30px;
+}
+
+.settings-buttons-box {
+
+}
+
+.settings-buttons-item-box {
+
+width: 273px;
+
+height: 72px;
+
+background: #192136;
+
+border-radius: 6.01361px;
+
+
+font-size: 22px;
+
+color: #BEBEBE;
+
+display: flex;
+
+justify-content: center;
+
+align-items: center;
+
+font-family: system-ui;
+}
+
+.settings-buttons-item-box:nth-child(2) {
+    margin-top: 16px;
+}
+
+.play-settings-content-box {
+
+width: 100%;
+
+height: 100%;
+}
+
+.content-continue-watching-box {
+
+    height: 72px;
+
+    display: flex;
+    
+    justify-content: space-between;
+    
+    align-items: center;
+    
+    font-size: 32px;
+    
+    font-family: sans-serif;
+    
+    color: #FFFFFF;
+    
+    padding: 0px 60px;
+}
+
+.content-favorites-box {
+
+    margin-top: 20px;
+
+height: 72px;
+
+display: flex;
+
+justify-content: space-between;
+
+align-items: center;
+
+font-size: 32px;
+
+font-family: sans-serif;
+
+color: #FFFFFF;
+
+padding: 0px 60px;
+}
+
+.favorite-img-box {
+    margin-top: 15px;
+}
+
+.continue-img-box {
+    margin-top: 15px;
+    
+}
+
+.exit-content-box {
+
+height: 100%;
+
+display: flex;
+
+align-items: center;
+
+justify-content: center;
+}
+
+.content-title-and-button-box {
+
+width: 340px;
+
+height: 220px;
+}
+
+.content-title-box {
+
+color: #FFFFFF;
+
+font-size: 32px;
+
+font-family: sans-serif;
+}
+
+.content-buttons-box {
+
+margin-top: 90px;
+
+display: flex;
+
+justify-content: space-between;
+}
+
+.buttons-item-box {
+    
+width: 154px;
+    
+height: 72px;
+    
+background-color: #192136;
+    
+border-radius: 6.01361px;
+    
+display: flex;
+    
+justify-content: center;
+    
+align-items: center;
+    
+color: #BEBEBE;
+    
+font-family: sans-serif;
+    
+font-size: 22px;
+}

@@ -1,0 +1,77 @@
+.main-search-system-box {
+    height: 100%;
+    padding: 15px;
+    overflow: hidden;
+}
+
+.main-search-box {
+    
+margin-top: 60px;
+    
+height: 60px;
+    
+display: flex;
+    
+align-items: center;
+    
+justify-content: center;
+}
+
+.main-search-input-box {
+
+width: 1200px;
+
+height: 100%;
+
+background-color: #24314b;
+
+font-size: 40px;
+
+padding: 20px;
+
+color: white;
+
+border-radius: 10px;
+
+border: 0;
+}
+
+::placeholder {
+    color: white;
+}
+
+.search-lists-box {
+
+display: flex;
+
+transition: 0.4s;
+
+width: 8000000px;
+}
+
+.main-search-lists-box {
+    
+margin-top: 200px;
+    
+width: 100%;
+} 
+
+.card-shimer-box {
+    width: 332px;
+    height: 194px;
+}
+
+.shimer-box {
+    display: flex;
+    justify-content: space-between;
+}
+
+.not-found-box {
+    position: absolute;
+    left: 47%;
+    font-size: 40px;
+    color: white;
+    top: 200px;
+    font-family: sans-serif;
+    letter-spacing: 1px;
+}
