@@ -3,6 +3,7 @@ var videoCurrentTime = null
 var progresLIneWidth
 
 function renderCategVideos(message,elem) {
+    console.log(message);
     let categVideosBox = el('div','categ-videos-box')
     let categVideo = el('video','categ-video')
     let videoPlayerBox = el('div','video-player-box')
@@ -26,7 +27,7 @@ function renderCategVideos(message,elem) {
         continueVideoData.data.playlist.push(message)
     }
 
-    var videoSrc = 'https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8';
+    var videoSrc = message.sources[0].file
     if (Hls.isSupported()) {
       var hls = new Hls();
       hls.loadSource(videoSrc);
@@ -58,6 +59,7 @@ function renderCategVideos(message,elem) {
 }
 
 function videoOnPlaying() {
+    console.log('play');
     if (document.querySelector('.video-load-box')) {
         document.querySelector('.video-load-box').remove()
         controls.select = controls.videoPlayer
@@ -182,6 +184,7 @@ function videoTimeUpdate(categVideo,message) {
 function videoLoadedData(categVideo,message) {
     if (document.querySelector('.progres-line-box')) {
         videoDuration = new Date(categVideo.duration * 1000).toISOString().slice(14, 19)
+        console.log(videoDuration);
         document.querySelector('.video-duration-time').textContent = '/'+videoDuration
     }
 }
@@ -314,6 +317,7 @@ function renderFavoriteBox(message) {
 
     return favoriteBox
 }
+
 function favoriteButtonClick(message,favoriteButtonBox) {
     if (message.favorite) {
         message.favorite = false
