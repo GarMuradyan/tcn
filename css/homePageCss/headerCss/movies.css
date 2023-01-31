@@ -1,4 +1,4 @@
-.main_categ-movies-box {height: 100%;padding: 15px;}
+.main_categ-movies-box {height: 100%;padding: 15px;overflow: hidden;}
 
 .main_categ-movies_top-box {display: flex;color: white;width: 900px;;margin-left: 10px;}
 
@@ -34,7 +34,7 @@
 
 .main_categ-movies_tcn_lists_parent {height: 2000px;}
 
-.main_categ-movies_tcn-box {height: 550px;overflow: hidden;}
+.main_categ-movies_tcn-box {height: 11111111111111111111px;overflow: hidden;}
 
 .main_categ-movies_tcn_lists {display: flex;/* grid-template-rows: repeat(2,194px); *//* grid-template-columns: repeat(5,332px); *//* row-gap: 50px; *//* column-gap: 12px; */width: 100%;/* margin-top: 15px; */transition: 0.4s;flex-wrap: wrap;flex-direction: row;}
 

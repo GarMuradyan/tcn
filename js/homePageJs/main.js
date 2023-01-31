@@ -80,7 +80,10 @@ function renderMainTopLogoBox(message) {
         mainTopTitleBox.textContent = message.title
 
         mainTopLogoBox.onclick = ()=> {
+            document.body.append(videoLoading())
             mainTopLogoBoxClick(message,mainTopLogoBox)
+            document.querySelector('.categ-video').style.display = 'none'
+
         }
     
         mainTopLogoBox.append(mainTopTitleBox)
@@ -105,12 +108,14 @@ function mainTopLogoBoxClick(message,mainTopLogoBox) {
         document.querySelector('.categ-videos-box').remove()
     }
     
+    
+    controls.privius = controls.select
+
     document.body.append(renderCategVideos(message,mainTopLogoBox))
 
     
     renderSimilarChanselss([],mainTopLogoBox)
 
-    controls.privius = controls.select
     controls.select = controls.videoPlayer
 }
 
@@ -251,12 +256,14 @@ function homeCardClick(mainBottomListsRowsCardBox,message,data) {
     if (document.querySelector('.categ-videos-box')) {
         document.querySelector('.categ-videos-box').remove()
     }
+
+    controls.privius = controls.select
     
     document.body.append(renderCategVideos(message,mainBottomListsRowsCardBox))
     mainBottomListsRowsCardBox.classList.add('active-scale')
 
     renderSimilarChanselss(moviesRowsData,mainBottomListsRowsCardBox)
-    controls.privius = controls.select
+
     controls.select = controls.loading
 }
 
@@ -279,11 +286,12 @@ function categoriesCardClick(mainBottomListsRowsCardBox,message,data) {
     if (document.querySelector('.categ-videos-box')) {
         document.querySelector('.categ-videos-box').remove()
     }
+
+    controls.privius = controls.select
     
     document.body.append(renderCategVideos(message,mainBottomListsRowsCardBox))
 
     renderSimilarChanselss(data,mainBottomListsRowsCardBox)
-    controls.privius = controls.select
     controls.select = controls.loading
 }
 
@@ -293,11 +301,12 @@ function searchCardClick(mainBottomListsRowsCardBox,message,data) {
     if (document.querySelector('.categ-videos-box')) {
         document.querySelector('.categ-videos-box').remove()
     }
+
+    controls.privius = controls.select
     
     document.body.append(renderCategVideos(message,mainBottomListsRowsCardBox))
 
     renderSimilarChanselss(moviesRowsData,mainBottomListsRowsCardBox)
-    controls.privius = controls.select
     controls.select = controls.loading
 }
  

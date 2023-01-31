@@ -181,7 +181,9 @@ var controls = {
                         mainBottomLIstsData.splice(i,1)
                     }
                 }
-                mainBottomLIstsData.unshift(continueVideoData)
+                if (continueVideoData.data.playlist.length) {
+                    mainBottomLIstsData.unshift(continueVideoData)
+                }
             }
             if (!favoritesData.data.playlist.length) {
                 for (let i = 0; i < mainBottomLIstsData.length; i++) {

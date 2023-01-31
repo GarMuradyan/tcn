@@ -3,6 +3,7 @@ var videoCurrentTime = null
 var progresLIneWidth
 
 function renderCategVideos(message,elem) {
+    var videoSrc
     console.log(message);
     let categVideosBox = el('div','categ-videos-box')
     let categVideo = el('video','categ-video')
@@ -18,16 +19,24 @@ function renderCategVideos(message,elem) {
         }
     }
 
-    if (!elem.classList.contains('continue-card')) {
-        for (let i = 0; i < continueVideoData.data.playlist.length; i++) {
-            if (continueVideoData.data.playlist[i].title === message.title) {
-                continueVideoData.data.playlist.splice(i,1)
+    if (controls.privius !== controls.homeVideo) {
+        if (!elem.classList.contains('continue-card')) {
+            for (let i = 0; i < continueVideoData.data.playlist.length; i++) {
+                if (continueVideoData.data.playlist[i].title === message.title) {
+                    continueVideoData.data.playlist.splice(i,1)
+                }
             }
+            continueVideoData.data.playlist.push(message)
         }
-        continueVideoData.data.playlist.push(message)
     }
 
-    var videoSrc = message.sources[0].file
+    if (controls.privius === controls.homeVideo) {
+        videoSrc = message.playlist[0].sources[0].file
+    }else {
+        videoSrc = message.sources[0].file
+        videoPlayerBox.insertBefore(renderFavoriteBox(message),videoPlayerBox.children[1])
+    }
+
     if (Hls.isSupported()) {
       var hls = new Hls();
       hls.loadSource(videoSrc);
@@ -47,8 +56,7 @@ function renderCategVideos(message,elem) {
     } 
     categVideo.setAttribute('autoplay',true)
 
-    videoPlayerBox.append(renderVideoPlayPauseAndDurationButtons())
-    videoPlayerBox.append(renderFavoriteBox(message))
+    videoPlayerBox.prepend(renderVideoPlayPauseAndDurationButtons())
     videoPlayerBox.append(renderVideoProgres())
 
     categVideosBox.append(categVideo)
