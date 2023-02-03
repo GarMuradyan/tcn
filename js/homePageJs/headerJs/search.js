@@ -119,3 +119,10 @@ function keyboardEnterClick() {
         controls.select.addActive()
     }
 }
+
+function keyboardShiftClick() {
+    if (document.querySelector('.keyboard-box')) {
+        document.querySelector('.keyboard-box').remove()
+    }
+    renderKeyboard()
+}

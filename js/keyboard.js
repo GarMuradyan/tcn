@@ -1,4 +1,16 @@
+var shift = true
 function renderKeyboard() {
+    if (shift) {
+        shift = false
+       return renderKeyboardToLowerCase()
+    }else {
+        shift = true
+       return renderKeyboardToUpperCase()
+    }
+
+}
+
+function renderKeyboardToLowerCase() {
     const keyboardArr = [
         [1,2,3,4,5,6,7,8,9,0,'&','Backspace'],
         ['q','w','e','r','t','y','u','i','o','p','{','}','+'],
@@ -39,6 +51,50 @@ function renderKeyboard() {
     }
     return keyboardBox
 }
+
+function renderKeyboardToUpperCase() {
+    console.log('mec');
+    const keyboardArr = [
+        [1,2,3,4,5,6,7,8,9,0,'&','Backspace'],
+        ['Q','W','E','R','T','Y','U','I','O','P','{','}','+'],
+        ['A','S','D','F','G','H','J','K','L',':',`""`,'Enter'],
+        ['Shift','Z','X','C','V','B','N','M',',','.','Space',]
+    ]
+    let keyboardBox = el('div','keyboard-box')
+    keyboardBox.classList.add('keyboard-trans')
+
+    for (let i = 0; i < keyboardArr.length; i++) {
+        let keyboardRowsBox = el('div','keyboard-rows-box')
+        keyboardBox.append(keyboardRowsBox)
+        for (let j = 0; j < keyboardArr[i].length; j++) {
+            let keyboardRowsBoxItem = el('div','kyeboard-rows-box-item')
+            keyboardRowsBoxItem.textContent = keyboardArr[i][j]
+            keyboardRowsBox.append(keyboardRowsBoxItem)
+            if (keyboardArr[i][j] === 'Enter') {
+                keyboardRowsBoxItem.textContent = ''
+                keyboardRowsBoxItem.classList.add('enter')
+                
+            }
+            if (keyboardArr[i][j] === 'Backspace') {
+                keyboardRowsBoxItem.textContent = ''
+                keyboardRowsBoxItem.classList.add('backspace')
+                
+            }
+            if (keyboardArr[i][j] === 'Space') {
+                keyboardRowsBoxItem.textContent = ''
+                keyboardRowsBoxItem.classList.add('space')
+                
+            }
+            if (keyboardArr[i][j] === 'Shift') {
+                keyboardRowsBoxItem.textContent = ''
+                keyboardRowsBoxItem.classList.add('shift')
+                
+            }
+        }
+    }
+    return keyboardBox
+}
+
 function keyboardItemsClick (keyboardRowsBox) {
     for (let i = 0; i < keyboardRowsBox.length; i++) {
         for (let j = 0; j < keyboardRowsBox[i].getElementsByClassName('kyeboard-rows-box-item').length; j++) {
@@ -68,7 +124,7 @@ function keyboardItemsClick (keyboardRowsBox) {
                     renderSearchShimer()
                 }
                 if (keyboardRowsBox[i].getElementsByClassName('kyeboard-rows-box-item')[j].classList.contains('shift')) {
-
+                    keyboardShiftClick()
                 }
                 if (keyboardRowsBox[i].getElementsByClassName('kyeboard-rows-box-item')[j].classList.contains('enter')) {
                     keyboardEnterClick()
