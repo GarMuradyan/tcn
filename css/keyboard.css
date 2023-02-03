@@ -1,26 +1,25 @@
 .keyboard-box {
-    height: 265px;
+    height: 350px;
     position: fixed;
-    top: 800px;
-    width: 850px;
+    top: 700px;
+    width: 1200px;
     padding: 10px 6px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     transition: 0.6s linear;
-    left: 30%;
-    background-color: #121C30;
+    left: 22%;
 }
 
 .keyboard-trans {
-    transform: translateY(300px);
+    transform: translateY(400px);
 }
 
 .keyboard-rows-box {
     color: white;
     font-size: 36px;
     height: 50px;
-    width: 840px;
+    width: 100%;
     font-family: sans-serif;
     display: flex;
     align-items: center;
@@ -31,39 +30,40 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 60px;
-    height: 60px;
-    border: 1px solid rgb(45, 45, 45);
+    width: 79px;
+    height: 77px;
+    background-color: #192136;
+    border-radius: 10px;
 }
 
 .enter {
     background-image: url(http://webapp.tivimivi.net/js/KeyBoard/images/enter.png);
-    width: 122px;
-    height: 60px;
+    width: 168px;
+    height: 70px;
     background-repeat: no-repeat;
     background-position: 50% 50%;
 }
 
 .shift {
     background-image: url(http://webapp.tivimivi.net/js/KeyBoard/images/shift.png);
-    width: 122px;
-    height: 60px;
+    width: 168px;
+    height: 77px;
     background-repeat: no-repeat;
     background-position: 50% 50%;
 }
 
 .backspace {
     background-image: url(http://webapp.tivimivi.net/js/KeyBoard/images/back.png);
-    width: 122px;
-    height: 60px;
+    width: 168px;
+    height: 77px;
     background-repeat: no-repeat;
     background-position: 50% 50%;
 }
 
 .space {
     background-image: url(http://webapp.tivimivi.net/js/KeyBoard/images/space.png);
-    width: 122px;
-    height: 60px;
+    width: 168px;
+    height: 70px;
     background-repeat: no-repeat;
     background-position: 50% 50%;
 }

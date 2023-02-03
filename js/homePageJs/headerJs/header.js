@@ -173,7 +173,7 @@ function controlsTcnIndex() {
 }
 
 function menuOpend() {
-    document.getElementsByTagName('aside')[0].style.width = '300px'
+    document.getElementsByTagName('aside')[0].style.width = '315px'
     document.getElementsByClassName('aside-box_logo')[0].style.width = '150px'
     for (let i = 0; i < document.getElementsByClassName('aside-box_menu_item').length; i++) {
         document.getElementsByClassName('aside-box_menu_item')[i].style.width = '285px'

@@ -367,7 +367,10 @@ function favoriteButtonClick(message,favoriteButtonBox) {
                 }
 
             }
-            mainBottomLIstsData.unshift(favoritesData)
+            if (favoritesData.data.playlist.length) {
+                mainBottomLIstsData.unshift(favoritesData)
+                localStorage.setItem('favorite',JSON.stringify(favoritesData))
+            }
         }
         favoriteButtonBox.style.color = 'red'
     }

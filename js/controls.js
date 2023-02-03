@@ -177,12 +177,12 @@ var controls = {
             if (continueNum) {
                 for (let i = 0; i < mainBottomLIstsData.length; i++) {
                     if (mainBottomLIstsData[i].data.class === "continue-card") {
-                        console.log('splicee');
                         mainBottomLIstsData.splice(i,1)
                     }
                 }
                 if (continueVideoData.data.playlist.length) {
                     mainBottomLIstsData.unshift(continueVideoData)
+                    localStorage.setItem('continue',JSON.stringify(continueVideoData))
                 }
             }
             if (!favoritesData.data.playlist.length) {
@@ -192,11 +192,10 @@ var controls = {
                     }
                 }
             }
-            renderMainBottomLists(mainBottomLIstsData)
-            console.log(mainBottomLIstsData);
-            localStorage.setItem('favorite',JSON.stringify(favoritesData))
-            localStorage.setItem('continue',JSON.stringify(continueVideoData))
             localStorage.setItem( 'data',JSON.stringify(mainBottomLIstsData))
+            localStorage.setItem('favorite',JSON.stringify(favoritesData))
+            renderMainBottomLists(JSON.parse(localStorage.getItem('data')))
+            console.log(mainBottomLIstsData);
             controls.movieList.listTrans()
             if (controls.select === controls.movieList) {
                 console.log(controls.select.index);
