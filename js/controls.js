@@ -724,6 +724,7 @@ var controls = {
         }
     },
     keyboard: {
+        name:'keyboard',
         index:0,
         item:document.getElementsByClassName('keyboard-rows-box'),
         rowsIndex:0,

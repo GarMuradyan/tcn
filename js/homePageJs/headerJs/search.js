@@ -81,7 +81,6 @@ function renderNotFound(data) {
         notFoundBox.textContent = 'Not Found'
 
         document.querySelector('.main-search-system-box').append(notFoundBox)
-        console.log('888');
     }
 }
 
@@ -102,7 +101,6 @@ function selectInput (e) {
     controls.select.rowsIndex = 0
     controls.select.firstActive()
     keyboardItemsClick(document.querySelectorAll('.keyboard-rows-box'))
-    e.stopPropagation()
 
 }
 
@@ -124,5 +122,11 @@ function keyboardShiftClick() {
     if (document.querySelector('.keyboard-box')) {
         document.querySelector('.keyboard-box').remove()
     }
-    renderKeyboard()
+
+   document.querySelector('.main-search-system-box').append(renderKeyboard())
+   document.querySelector('.keyboard-box').classList.remove('keyboard-trans')
+   console.log(controls.select);
+   activeInput = document.querySelector('.main-search-input-box')
+   keyboardItemsClick(document.querySelectorAll('.keyboard-rows-box'))
+   controls.select.addActive()
 }
