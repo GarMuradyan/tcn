@@ -67,9 +67,11 @@ function renderSearch(list,text) {
     for (let i = 0; i < data.length; i++) {
         searchListsBox.append(renderBottomListsCard(data[i],'search-card',data))
     }
+    
     if (document.querySelector('.shimer-box')) {
         document.querySelector('.shimer-box').remove()
     }
+    
     document.querySelector('.main-search-lists-box').append(searchListsBox)
 
 }
