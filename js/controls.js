@@ -194,7 +194,7 @@ var controls = {
             }
             localStorage.setItem( 'data',JSON.stringify(mainBottomLIstsData))
             localStorage.setItem('favorite',JSON.stringify(favoritesData))
-            renderMainBottomLists(JSON.parse(localStorage.getItem('data')))
+            renderMainBottomLists(mainBottomLIstsData)
             console.log(mainBottomLIstsData);
             controls.movieList.listTrans()
             if (controls.select === controls.movieList) {
